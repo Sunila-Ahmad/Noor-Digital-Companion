@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Companion | Ramadan Digital Journal</title>
+    <link rel="stylesheet" href="ramadan-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <nav class="side-nav">
+            <div class="nav-logo">🌙 Noor</div>
+            <a href="#journal"><i class="fas fa-calendar-check"></i> Journal</a>
+            <a href="#salah"><i class="fas fa-mosque"></i> Salah</a>
+            <a href="#tasbeeh"><i class="fas fa-fingerprint"></i> Tasbeeh</a>
+            <a href="#knowledge"><i class="fas fa-book-quran"></i> Knowledge</a>
+        </nav>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h2>Ramadan Kareem, <span>Sunila</span></h2>
+                <div class="date-chip" id="currentDate">Ramadan 1, 1447 AH</div>
+            </header>
+
+            <div class="bento-container">
+                <div class="bento-card tasbeeh-section" id="tasbeeh">
+                    <h3>Digital Tasbeeh</h3>
+                    <div class="counter-display" id="count">0</div>
+                    <p id="tasbeeh-label">SubhanAllah</p>
+                    <div class="tasbeeh-btns">
+                        <button onclick="increment()" class="btn-count">TAP</button>
+                        <button onclick="resetCounter()" class="btn-reset">Reset</button>
+                    </div>
+                </div>
+
+                <div class="bento-card salah-section" id="salah">
+                    <h3>Salah Tracker</h3>
+                    <div class="checklist">
+                        <label><input type="checkbox" class="salah-check"> Fajr</label>
+                        <label><input type="checkbox" class="salah-check"> Dhuhr</label>
+                        <label><input type="checkbox" class="salah-check"> Asr</label>
+                        <label><input type="checkbox" class="salah-check"> Maghrib</label>
+                        <label><input type="checkbox" class="salah-check"> Isha</label>
+                        <label><input type="checkbox" class="salah-check" data-extra="tahajjud"> Tahajjud</label>
+                    </div>
+                </div>
+
+                <div class="bento-card journal-section" id="journal">
+                    <h3>30-Day Spiritual Progress</h3>
+                    <div class="calendar-grid" id="ramadanDays">
+                        </div>
+                </div>
+
+                <div class="bento-card knowledge-section" id="knowledge">
+                    <h3>Essential Knowledge</h3>
+                    <div class="tabs">
+                        <button onclick="showContent('duas')">Duas</button>
+                        <button onclick="showContent('names')">99 Names</button>
+                        <button onclick="showContent('surahs')">Surahs</button>
+                    </div>
+                    <div id="dynamic-content" class="content-area">
+                        <p>Select a category to view details.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="ramadan-script.js"></script>
+</body>
+</html>
